@@ -147,7 +147,7 @@ footer p {
 /*start About page*/
 .container-1 {
   background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url("globe-1.jpg");
-  position: relative;
+  position: absolute;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -170,8 +170,6 @@ footer p {
   left: 50%;
   text-align: center;
 }
-
-
 
 /*end About page*/
 
