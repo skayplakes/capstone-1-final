@@ -156,18 +156,17 @@ footer p {
 }
 
 .container-1 h3 {
-  color: #ff6600;
+  color: #000000;
 }
 
 .container-1 p {
   color: #000000;
 }
 
-.container-1 .contact-content {
-  position: absolute;
-  transform: translate(-50%, -50%)
-  top: 50%;
-  left: 50%;
+.container-1 .center {
+  position: relative;
+  /*transform: translateY(100%);*/
+  /*left: 50%;*/
   text-align: center;
 }
 
