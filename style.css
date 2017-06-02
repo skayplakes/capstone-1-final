@@ -220,3 +220,31 @@ form {
 }
 
 /*end Contact page*/
+
+@media (max-width: 768px) {
+  .button-1 {
+    font-size:11px;
+    padding:4px 6px;
+  }
+}
+
+@media (min-width: 768px) {
+  .button-1 {
+    font-size:12px;
+    padding:6px 12px;
+  }
+}
+
+@media (min-width: 992px) {
+  .button-1 {
+    font-size:14px;
+    padding:8px 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .button-1 {
+    padding:10px 16px;
+    font-size:18px;
+  }
+}
