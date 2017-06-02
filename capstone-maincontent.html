@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="ammap/ammap.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="ammap/ammap.css" type="text/css" media="all" />
+    <script src="ammap/maps/js/worldLow.js" type="text/javascript"></script>
+    <script src="ammap/plugins/responsive.min.js" type="text/javascript"></script>
+    <script src="ammap/themes/light.js" type="text/javascript"></script>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+
+  <body>
+
+  <nav class="navbar-1 navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-inner">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-countries">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img src="world-location.png""></a>
+        </div>
+          <div class="collapse navbar-collapse" id="navbar-countries">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="link-1"><a href="index.html">Home</a></li>
+              <li class="link-1 active"><a href="capstone-maincontent.html">Interactive Map</a></li>
+              <li class="link-1"><a href="capstone-about.html">About this Project</a></li>
+              <li class="link-1"><a href="capstone-contact.html">Contact Me</a></li>
+            </ul>
+          </div>
+        </div>
+  </nav> <!--Navbar with effects-->
+
+
+  <div id="mapdiv">
+    
+  </div> 
+  <!--interactive map-->
+
+  <!--Start Footer-->
+  <footer class="footer">
+    <p>© June 2017 All Rights Reserved</p>
+  </footer>
+  <!--/footer-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+      var targetSVG = "M9,0C4.029,0,0,4.029,0,9s4.029,9,9,9s9-4.029,9-9S13.971,0,9,0z M9,15.93 c-3.83,0-6.93-3.1-6.93-6.93S5.17,2.07,9,2.07s6.93,3.1,6.93,6.93S12.83,15.93,9,15.93 M12.5,9c0,1.933-1.567,3.5-3.5,3.5S5.5,10.933,5.5,9S7.067,5.5,9,5.5 S12.5,7.067,12.5,9z"; /*for target icon*/
+
+      var planeSVG = "M19.671,8.11l-2.777,2.777l-3.837-0.861c0.362-0.505,0.916-1.683,0.464-2.135c-0.518-0.517-1.979,0.278-2.305,0.604l-0.913,0.913L7.614,8.804l-2.021,2.021l2.232,1.061l-0.082,0.082l1.701,1.701l0.688-0.687l3.164,1.504L9.571,18.21H6.413l-1.137,1.138l3.6,0.948l1.83,1.83l0.947,3.598l1.137-1.137V21.43l3.725-3.725l1.504,3.164l-0.687,0.687l1.702,1.701l0.081-0.081l1.062,2.231l2.02-2.02l-0.604-2.689l0.912-0.912c0.326-0.326,1.121-1.789,0.604-2.306c-0.452-0.452-1.63,0.101-2.135,0.464l-0.861-3.838l2.777-2.777c0.947-0.947,3.599-4.862,2.62-5.839C24.533,4.512,20.618,7.163,19.671,8.11z"; /*for plane icon*/
+
+      var maps = AmCharts.makeChart( "mapdiv", {
+        "type": "map",
+        "theme": "light",
+        "dataProvider": {
+          "map": "worldLow",
+          "images": [ {
+            "id": "tuitt-bootcamp",
+            "color": "#000000", /*color of bootcamp*/
+            "svgPath": targetSVG,
+            "title": "Tuitt Bootcamp",
+            "latitude": 14.6327700,
+            "longitude": 121.0437900,
+            "scale": 1.5,
+            "zoomLevel": 2.74,
+            "zoomLongitude": 121.0437900,
+            "zoomLatitude": 14.6327700,
+            "description": "This is where you are now. You're probably presenting your website in front of many people right now.",
+
+        "lines": [ {
+          
+          "latitudes": [ 14.6327700, 13.753 ],
+          "longitudes": [ 121.0437900, 100.5018 ] /*bangkok coordinates*/
+        }, {
+          
+          "latitudes": [ 14.6327700, 35.6895 ],
+          "longitudes": [ 121.0437900, 139.6917 ] /*tokyo coordinates*/
+        }, {
+          
+          "latitudes": [ 14.6327700, 28.6139 ],
+          "longitudes": [ 121.0437900, 77.2090 ] /*new delhi coordinates*/
+        }, {
+          
+          "latitudes": [ 14.6327700, 55.7558 ],
+          "longitudes": [ 121.0437900, 37.6173 ] /*moscow coordinates*/
+        }, {
+          
+          "latitudes": [ 14.6327700, 59.3293 ],
+          "longitudes": [ 121.0437900, 18.0686 ] /*stockholm coordinates*/
+        }, {
+          
+          "latitudes": [ 14.6327700, 38.9072 ],
+          "longitudes": [ 121.0437900, -77.0369 ] /*washington coordinates*/
+        }, {
+          
+          "latitudes": [ 14.6327700, -27.1130 ],
+          "longitudes": [ 121.0437900, -109.3496 ] /*easter island coordinates*/
+        }, {
+
+          "latitudes": [ 14.6327700, 59.9139 ],
+          "longitudes": [ 121.0437900, 10.7522 ] /*oslo norway coordinates*/
+        }, {
+
+          "latitudes": [ 14.6327700, 9.0820 ],
+          "longitudes": [ 121.0437900, 8.6753 ] /*nigeria africa coordinates*/
+        }, {
+          
+          "latitudes": [ 14.6327700, -48.876667 ],
+          "longitudes": [ 121.0437900, -123.393333 ] /*point nemo coordinates*/
+        }, {
+          
+          "latitudes": [ 14.6327700, -15.6462 ],
+          "longitudes": [ 121.0437900, -56.1327 ] /*varzea grande coordinates*/
+        } ], 
+          
+        "images": [ {
+          "label": "Tuitt Bootcamp",
+          "svgPath": planeSVG,
+          "left": 100,
+          "top": 45,
+          "labelShiftY": 5,
+          "color": "#CC0000",
+          "labelColor": "#CC0000",
+          "labelRollOverColor": "#CC0000",
+          "labelFontSize": 20
+        }, {
+          "label": "Approximate distance to other places",
+          "left": 106,
+          "top": 70,
+          "labelColor": "#000000",
+          "labelRollOverColor": "#CC0000",
+          "labelFontSize": 11
+        } ]
+
+      }, {
+  
+        "svgPath": targetSVG,
+        "title": "Bangkok, Thailand",
+        "latitude": 13.7563,
+        "longitude": 100.5018,
+        "scale": 1,
+        "zoomLevel": 5,
+        "description": "<p>Distance: 2,265 km</p>Bangkok is known to locals as Krung Thep which is shortened from 'Krungthepmahanakhon Amonrattanakosin Mahinthara Yutthaya Mahadilok Phop Noppharat Ratchathani Burirom Udom Ratchaniwet Mahasathan Amonphiman Awatansathit Sakkathattiya Witsanukamprasit.'"
+      }, {
+        "svgPath": targetSVG,
+        "title": "Tokyo, Japan",
+        "latitude": 35.6895,
+        "longitude": 139.6917,
+        "zoomLevel": 5,
+        "description": "<p>Distance: 3,075 km</p>Think the MRT is bad? Tokyo's Shinjuku Station is the world's busiest rail station, with an average of 3.64 million people taking it daily. The commute is so bad that the rails station employ <em>Oshiya</em>, or pushers, to push people into crowded trains during rush hour." /*https://matadornetwork.com/abroad/20-things-might-know-tokyo/ */
+      }, {
+        "svgPath": targetSVG,
+        "title": "New Delhi, India",
+        "latitude": 28.6139,
+        "longitude": 77.2090,
+        "zoomLevel": 5,
+        "description": "<p>Distance: 4,630 km</p>New Delhi is home to the International Toilet Museum. Incidentally, it is where Asia's largest wholesale spice market is located. Make of that what you will."
+      }, {
+        "svgPath": targetSVG,
+        "title": "Moscow, Russia",
+        "latitude": 55.7558,
+        "longitude": 37.6173,
+        "zoomLevel": 5,
+        "description": "<p>Distance: 5,575 km</p>Moscow is the largest European city having an area of 2511 square km and with a population of 12 million. It is so huge, in fact, that it has the right to be a country."
+      }, {
+        "svgPath": targetSVG,
+        "title": "Stockholm, Sweden",
+        "latitude": 59.3293,
+        "longitude": 18.0686,
+        "zoomLevel": 5,
+        "description": "<p>Distance: 9,488 km</p>On Stockholm's shortest day the capital sees a mere 6 hours of sunlight, while on the longest day it's light for nearly 21 hours."
+      }, {
+        "svgPath": targetSVG,
+        "title": "Washington DC, USA",
+        "latitude": 38.9072,
+        "longitude": -77.0369,
+        "zoomLevel": 5,
+        "description": "<p>Distance: 13,230 km</p>Washington DC is the home of the White house. Did you know that the White House is the only private residence of a head os state that the public can visit for free. You have to book tours in advance though."
+      }, {
+        "svgPath": targetSVG,
+        "title": "Oslo, Norway",
+        "latitude": 59.9139,
+        "longitude": 10.7522,
+        "scale": 1,
+        "zoomLevel": 5,
+        "description": "<p>Distance: 9,889 km</p>A popular Norwegian saying goes, 'There's no bad weather, just bad clothing choices.' The hottest temperature Oslo has throughout the year is 18 degrees Celsius."
+      }, {
+         "svgPath": targetSVG,
+        "title": "Nigeria, Africa",
+        "latitude": 9.0820,
+        "longitude": 8.6753,
+        "zoomLevel": 5,
+        "description": "<p>Distance: 12,227 km</p>Nigeria is home to Nollywood, the name given to the Nigerian Movie industry. It is the secong largest producers of movies in the world; only trailing behind Bollywood."     
+      }, {
+        "svgPath": targetSVG,
+        "title": "Easter Island",
+        "latitude": -27.1130,
+        "longitude": -109.3496,
+        "zoomLevel": 5,
+        "description": "<p>Distance: 14,500 km</p>Like Stonehenge, nobody knows for sure how the Moai statues where placed in their final locations. The Moai statues that are seen underwater off the coast of the island are placed there for the tourists."
+      }, {
+        "svgPath": targetSVG,
+        "title": "Point Nemo",
+        "latitude": -48.876667,
+        "longitude": -123.393333,
+        "zoomLevel": 5,
+        "description": "<p>Distance: 16,097 km</p>Fun Facts: Point Nemo is the location in the ocean that is the farthest from the land. It is used in literature by H.P. Lovecraft as the R'lyeh, the earthly home of Cthulhu. It is also the place where decomissioned satellites and space stations are deposited when re-entering the atmosphere as to risk hitting inhabited locations."
+      }, {
+        "svgPath": targetSVG,
+        "title": "Varzea Grande, Brazil",
+        "latitude": -15.5452,
+        "longitude": -56.1327,
+        "zoomLevel": 5,
+        "description": "<p>Distance: 19,700 km</p>This is the farthest place in the world from the Philippines. Excluding connecting flights, the average time that is needed to reach this place is approximately 22 hours." /*use <p> to seperate text*/
+      } ]
+      
+      },
+           "areasSettings": {
+              "unlistedAreasColor": "#ff6600" /*color of map*/
+      },
+
+            "imagesSettings": {
+              "color": "#CC0000",
+              "rollOverColor": "#CC0000",
+              "selectedColor": "#000000",
+      },
+
+            "linesSettings": {
+              "color": "#000000", /*color of lines*/
+              "alpha": 0.4,
+              "arc": -0.85,
+      },
+
+            "balloon": {
+              "drop": true
+      },
+
+            "backgroundZoomsToTop": true,
+            "linesAboveImages": true,
+
+            "export": {
+              "enabled": true
+      },
+             "responsive": {
+                "enabled": true
+      }
+
+      } );
+    </script>
+  </body>
+</html>
